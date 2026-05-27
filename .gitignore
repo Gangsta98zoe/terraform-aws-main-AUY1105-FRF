@@ -1,0 +1,24 @@
+# Estado de Terraform (contiene IDs y datos sensibles)
+*.tfstate
+*.tfstate.*
+
+# Planes de Terraform
+*.tfplan
+
+# Directorio de plugins
+.terraform/
+.terraform.lock.hcl
+
+# Logs y archivos temporales
+crash.log
+*.out
+
+# Credenciales de proveedor
+.terraformrc
+terraform.rc
+
+# Variables con credenciales (si hubiera un archivo separado)
+# terraform.tfvars NO se ignora porque sólo tiene valores de configuración
+# Si contuviera credenciales AWS, se debería ignorar.
+secrets.tfvars
+*.auto.tfvars
