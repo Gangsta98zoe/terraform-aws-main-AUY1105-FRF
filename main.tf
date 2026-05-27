@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "networking" {
-  source              = "github.com/Gangsta98zoe/terraform-module-networking?ref=v0.1.1"
+  source              = "github.com/Gangsta98zoe/terraform-module-networking?ref=v0.1.2"
   vpc_cidr_block      = var.vpc_cidr_block
   public_subnet_cidr  = var.public_subnet_cidr
   private_subnet_cidr = var.private_subnet_cidr
