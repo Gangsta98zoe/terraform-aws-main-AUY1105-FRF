@@ -1,16 +1,13 @@
-name: CI - terraform-root
-
+name: CI - terraform-aws-main-AUY1105-FRF
 on:
   pull_request:
     branches: [main]
-
 jobs:
   call-terraform-workflow:
     name: Terraform Checks
     uses: ./.github/workflows/terraform.yml
     with:
       path: .
-
   call-checkov-workflow:
     name: Security Analysis
     uses: ./.github/workflows/checkov.yml
