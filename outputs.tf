@@ -1,5 +1,3 @@
-CONTENIDO COMPLETO PARA outputs.tf:
-
 output "vpc_id" {
   description = "ID de la VPC"
   value       = module.vpc.vpc_id
