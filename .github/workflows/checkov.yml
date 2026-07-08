@@ -6,6 +6,9 @@ on:
         description: "Path to the Terraform code"
         required: true
         type: string
+permissions:
+  contents: read
+
 jobs:
   checkov:
     name: Run Checkov for Security Analysis
@@ -22,4 +25,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install checkov
       - name: Run Checkov on Terraform files
-        run: checkov -d ${{ inputs.path }}
+        # Excepciones documentadas (entorno académico AWS Learner Lab):
+        # - CKV_TF_1: el curso usa pin por tag SemVer (?ref=vX.Y.Z), no commit hash
+        run: >-
+          checkov -d ${{ inputs.path }}
+          --skip-check CKV_TF_1

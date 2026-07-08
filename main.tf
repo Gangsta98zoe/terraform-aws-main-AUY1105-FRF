@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source              = "github.com/Gangsta98zoe/terraform-aws-vpc-AUY1105-FRF?ref=v1.0.0"
+  source              = "github.com/Gangsta98zoe/terraform-aws-vpc-AUY1105-FRF?ref=v1.1.0"
   vpc_cidr_block      = var.vpc_cidr_block
   public_subnet_cidr  = var.public_subnet_cidr
   private_subnet_cidr = var.private_subnet_cidr
@@ -31,7 +31,7 @@ module "ec2" {
 }
 
 module "s3" {
-  source      = "github.com/Gangsta98zoe/terraform-aws-s3-AUY1105-FRF?ref=v1.0.0"
+  source      = "github.com/Gangsta98zoe/terraform-aws-s3-AUY1105-FRF?ref=v1.1.0"
   environment = var.environment
   name_prefix = var.name_prefix
 }
